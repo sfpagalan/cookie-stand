@@ -1,13 +1,29 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sales</title>
+    <title>Salmon Cookie Stand</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: center;
+        }
+        
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
 </head>
 <body>
     <header>
-        <h1 id="title">Pat's Cookie Stand</h1>
+        <h1>Salmon Cookie Stand</h1>
     </header>
     <main>
         <h2>Seattle</h2>
@@ -21,6 +37,78 @@
         <h2>Lima</h2>
             <ul id="lima-sales"></ul>
     </main>
-    <script src="app.js"></script>
+</body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salmon Cookie Stand</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+        border: 1px solid black;
+        padding: 8px;
+        text-align: center;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Salmon Cookie Stand</h1>
+    </header>
+    <main>
+        <table id="sales-table">
+            <thead>
+                <tr>
+                    <th>Location</th>
+                    <th>0600</th>
+                    <th>0700</th>
+                    <th>0800</th>
+                    <th>0900</th>
+                    <th>1000</th>
+                    <th>1100</th>
+                    <th>1200</th>
+                    <th>1300</th>
+                    <th>1400</th>
+                    <th>1500</th>
+                    <th>1600</th>
+                    <th>1700</th>
+                    <th>1800</th>
+                    <th>1900</th>
+                    <th>Daily Location Total</th>
+                </tr>
+            </thead>
+            <!-- <tbody id="sales-table"></tbody> -->
+            <!-- <tfoot id="sales-table">
+                <tr>
+                    <th>Totals</th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                </tr>
+            </tfoot> -->
+        </table>
+        <script src="app.js"></script>
+    </main>
 </body>
 </html>
