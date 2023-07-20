@@ -1,131 +1,130 @@
-<!-- <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Salmon Cookie Stand</title>
-    <style>
-        table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-        
-        th, td {
-            border: 1px solid black;
-            padding: 8px;
-            text-align: center;
-        }
-        
-        th {
-            background-color: #f2f2f2;
-        }
-    </style>
-</head>
-<body>
-    <header>
-        <h1>Salmon Cookie Stand</h1>
-    </header>
-    <main>
-        <h2>Seattle</h2>
-            <ul id="seattle-sales"></ul>
-        <h2>Tokyo</h2>
-            <ul id="tokyo-sales"></ul>
-        <h2>Dubai</h2>
-            <ul id="dubai-sales"></ul>
-        <h2>Paris</h2>
-            <ul id="paris-sales"></ul>
-        <h2>Lima</h2>
-            <ul id="lima-sales"></ul>
-    </main>
-</body>
-</html> -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Salmon Cookie Stand</title>
-    <style>
-        nav ul {
-            list-style-type: none;
-            padding: 0;
-            margin: 0;
-            display: flex;
-        }
-        nav ul li {
-            margin-right: 15px;
-            margin-bottom: 10px;
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-        th, td {
-        border: 1px solid black;
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sales Data</title>
+  <style>
+    nav ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    /* nav ul li {
+        margin-right: 15px;
+        margin-bottom: 10px;
+    } */
+
+    nav ul li a {
+        text-decoration: none;
+        color: #f6f4f2;
+        padding: 5px 10px;
+        background-color: #483425;
+        border-radius: 10px;
+    }
+
+    nav ul li a:hover {
+        background-color: #c4a994;
+        border-radius: 5px;
+    }
+
+    table {
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    th, td {
+        border: 1px solid #483425;
         padding: 8px;
         text-align: center;
-        }
-        th {
-            background-color: #f2f2f2;
-        }
-    </style>
+    }
+
+    thead th {
+        background-color: #ab7f5d;
+    }
+
+    tbody tr:nth-child(even) {
+        background-color: #c4a994;
+    }
+
+    #staffing-table thead th {
+        background-color: #ab7f5d;
+    }
+
+    #staffing-table tbody tr:nth-child(even) {
+        background-color: #c4a994;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <h1>Salmon Cookie Stand</h1>
-        <nav>
-            <ul>
-                <li>
-                    <a href="https://sfpagalan.github.io/cookie-stand/">Home Page</a>
-                </li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <table id="sales-table">
-            <thead>
-                <tr>
-                    <th>Location</th>
-                    <th>0600</th>
-                    <th>0700</th>
-                    <th>0800</th>
-                    <th>0900</th>
-                    <th>1000</th>
-                    <th>1100</th>
-                    <th>1200</th>
-                    <th>1300</th>
-                    <th>1400</th>
-                    <th>1500</th>
-                    <th>1600</th>
-                    <th>1700</th>
-                    <th>1800</th>
-                    <th>1900</th>
-                    <th>Daily Location Total</th>
-                </tr>
-            </thead>
-            <!-- <tbody id="sales-table"></tbody> -->
-            <!-- <tfoot id="sales-table">
-                <tr>
-                    <th>Totals</th>
-                    <th></th>
-                    <th></th>
-                    <th></th>
-                    <th></th>
-                    <th></th>
-                    <th></th>
-                    <th></th>
-                    <th></th>
-                    <th></th>
-                    <th></th>
-                    <th></th>
-                    <th></th>
-                    <th></th>
-                    <th></th>
-                    <th></th>
-                </tr>
-            </tfoot> -->
-        </table>
-        <script src="app.js"></script>
-    </main>
+  <header>
+    <h1>Salmon Cookie Sales Data</h1>
+    <nav>
+        <ul>
+            <li>
+                <a href="index.html">Home Page</a>
+            </li>
+        </ul>
+    </nav>
+  </header>
+
+  <section class="table-section">
+    <h2>Cookie Sales Data</h2>
+    <table id="sales-table">
+      <thead>
+        <tr>
+          <th>Location</th>
+          <th>6:00 am</th>
+          <th>7:00 am</th>
+          <th>8:00 am</th>
+          <th>9:00 am</th>
+          <th>10:00 am</th>
+          <th>11:00 am</th>
+          <th>12:00 pm</th>
+          <th>1:00 pm</th>
+          <th>2:00 pm</th>
+          <th>3:00 pm</th>
+          <th>4:00 pm</th>
+          <th>5:00 pm</th>
+          <th>6:00 pm</th>
+          <th>7:00 pm</th>
+          <th>Daily Total</th>
+        </tr>
+      </thead>
+      <tbody>
+      </tbody>
+      <tfoot>
+      </tfoot>
+    </table>
+  </section>
+
+  <section class="table-section">
+    <h2>Staffing Data</h2>
+    <table id="staffing-table">
+      <thead>
+        <tr>
+          <th>Location</th>
+          <th>6:00 am</th>
+          <th>7:00 am</th>
+          <th>8:00 am</th>
+          <th>9:00 am</th>
+          <th>10:00 am</th>
+          <th>11:00 am</th>
+          <th>12:00 pm</th>
+          <th>1:00 pm</th>
+          <th>2:00 pm</th>
+          <th>3:00 pm</th>
+          <th>4:00 pm</th>
+          <th>5:00 pm</th>
+          <th>6:00 pm</th>
+          <th>7:00 pm</th>
+        </tr>
+      </thead>
+      <tbody>
+      </tbody>
+    </table>
+  </section>
+  <script src="app.js"></script>
 </body>
 </html>
