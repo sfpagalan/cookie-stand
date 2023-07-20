@@ -7,24 +7,43 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@400;800&display=swap" rel="stylesheet">
+    <script src="app.js"></script>
     <style>
-        h1, h2, h3 {
-            font-family: 'Doris', sans-serif;
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-right: 15px;
+            margin-bottom: 10px;
+        }
+
+        h1,
+        h2,
+        h3 {
+            font-family: 'Dosis', sans-serif;
             font-weight: 800;
         }
 
         .sales-data {
-            font-family: 'Doris', sans-serif;
+            font-family: 'Dosis', sans-serif;
             font-weight: 400;
         }
 
         body {
-            font-family: 'Doris', sans-serif;
+            font-family: 'Dosis', sans-serif;
             font-weight: 200;
         }
 
         h1 {
             color: #FF0000;
+        }
+
+        p {
+            margin: 0;
         }
 
         .sales-data {
@@ -43,26 +62,104 @@
             background-color: #FFFFFF;
         }
 
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+        border: 1px solid black;
+        padding: 8px;
+        text-align: center;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        .image-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .image-gallery img {
+            width: auto;
+            height: auto;
+            max-width: 300px;
+            max-height: 300px;
+            object-fit: contain;
+            border-radius: 5px;
+        }
     </style>
 </head>
+
 <body>
     <header>
         <h1 id="title">Pat's Salmon Cookies</h1>
         <nav>
             <ul>
                 <li>
-                    <p><a href="https://sfpagalan.github.io/cookie-stand/sales.html"></a></p>
+                    <a href="index.html">Home Page</a>
+                </li>
+                <li>
+                    <a href="https://sfpagalan.github.io/cookie-stand/sales.html">Sales Page</a>
                 </li>
             </ul>
         </nav>
     </header>
     <main>
-        <p>Welcome to Pat's Salmon Cookies! We offer delicious and eco-friendly treats for coffee time.</p>
-        <p>Visit one of our locations and enjoy our sustainable and tasty salmon-shaped cookies!</p>
-        <h2>Sales Data</h2>
-        <ul class="sales-data">
-            <li>Seattle Sales</li>
-        </ul>
+        <p>Welcome to Pat's Salmon Cookies! We offer delicious and Cat themed treats.</p>
+        <p>Visit one of our locations and enjoy our tasty cat and salmon-shaped cookies!</p>
+        <h2>Locations</h2>
+        <table class="sales-data">
+            <thead>
+                <tr>
+                    <th>Location</th>
+                    <th>Address</th>
+                    <th>Hours</th>
+                    <th>Contact Information</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Seattle Sales</td>
+                    <td>123 Cat St, Seattle, WA</td>
+                    <td>Mon-Sat: 6 AM - 7 PM</td>
+                    <td>Email: seattle@patscookies.com<br>Phone: (123) 456-7890</td>
+                </tr>
+                <tr>
+                    <td>Tokyo Sales</td>
+                    <td>123 Cat St, Tokyo, Japan</td>
+                    <td>Mon-Sat: 6 AM - 7 PM</td>
+                    <td>Email: tokyo@patscookies.com<br>Phone: +81 03 1234 5678</td>
+                </tr>
+                <tr>
+                    <td>Dubai Sales</td>
+                    <td>123 Cat St, Dubai, UAE</td>
+                    <td>Mon-Sat: 6 AM - 7 PM</td>
+                    <td>Email: dubai@patscookies.com<br>Phone: +971 55 123 4567</td>
+                </tr>
+                <tr>
+                    <td>Paris Sales</td>
+                    <td>123 Cat St, Paris, France</td>
+                    <td>Mon-Sat: 6 AM - 7 PM</td>
+                    <td>Email: paris@patscookies.com<br>Phone: +33 1 1234 5678</td>
+                </tr>
+                <tr>
+                    <td>Lima Sales</td>
+                    <td>123 Cat St, Lima, Peru</td>
+                    <td>Mon-Sat: 6 AM - 7 PM</td>
+                    <td>Email: lima@patscookies.com<br>Phone: +51 01 2345 6789</td>
+                </tr>
+            </tbody>
+        </table>
     </main>
+    <div class="image-gallery">
+        <img src="assets/family.jpg" alt="Family Owned">
+        <img src="assets/shirt.jpg" alt="Merchandise">
+        <img src="assets/frosted-cookie.jpg" alt="Cookie Sample">
+        <img src="assets/cutter.jpeg" alt="Cookie Cutter">
+        <img src="assets/chinook.jpg" alt="Chinook">
+        <img src="assets/fish.jpg" alt="Some Fish">
+        <img src="assets/salmon.png" alt="Salmon">
+    </div>
 </body>
+
 </html>
