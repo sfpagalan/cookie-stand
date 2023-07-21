@@ -11,11 +11,6 @@
         margin: 0;
     }
 
-    /* nav ul li {
-        margin-right: 15px;
-        margin-bottom: 10px;
-    } */
-
     nav ul li a {
         text-decoration: none;
         color: #f6f4f2;
@@ -29,6 +24,9 @@
         border-radius: 5px;
     }
 
+    form {
+      margin-top: 20px;
+    }
     table {
         border-collapse: collapse;
         width: 100%;
@@ -68,63 +66,81 @@
         </ul>
     </nav>
   </header>
-
-  <section class="table-section">
-    <h2>Cookie Sales Data</h2>
-    <table id="sales-table">
-      <thead>
-        <tr>
-          <th>Location</th>
-          <th>6:00 am</th>
-          <th>7:00 am</th>
-          <th>8:00 am</th>
-          <th>9:00 am</th>
-          <th>10:00 am</th>
-          <th>11:00 am</th>
-          <th>12:00 pm</th>
-          <th>1:00 pm</th>
-          <th>2:00 pm</th>
-          <th>3:00 pm</th>
-          <th>4:00 pm</th>
-          <th>5:00 pm</th>
-          <th>6:00 pm</th>
-          <th>7:00 pm</th>
-          <th>Daily Total</th>
-        </tr>
-      </thead>
-      <tbody>
-      </tbody>
-      <tfoot>
-      </tfoot>
-    </table>
-  </section>
-
-  <section class="table-section">
-    <h2>Staffing Data</h2>
-    <table id="staffing-table">
-      <thead>
-        <tr>
-          <th>Location</th>
-          <th>6:00 am</th>
-          <th>7:00 am</th>
-          <th>8:00 am</th>
-          <th>9:00 am</th>
-          <th>10:00 am</th>
-          <th>11:00 am</th>
-          <th>12:00 pm</th>
-          <th>1:00 pm</th>
-          <th>2:00 pm</th>
-          <th>3:00 pm</th>
-          <th>4:00 pm</th>
-          <th>5:00 pm</th>
-          <th>6:00 pm</th>
-          <th>7:00 pm</th>
-        </tr>
-      </thead>
-      <tbody>
-      </tbody>
-    </table>
-  </section>
+  <main>
+      <form id="cookie-stand-form">
+        <fieldset>
+            <legend>Add New Cookie Stand Location</legend>
+            <label for="location">Location:</label>
+                <input type="text" id="location" required>
+            <label for="min-customers">Minimum Customers:</label>
+                <input type="number" id="min-customers" required>
+            <label for="max-customers">Maximum Customers:</label>
+                <input type="number" id="max-customers" required>
+            <label for="avg-cookies">Average Cookie Sale:</label>
+                <input type="number" step="0.1" id="avg-cookies" required>
+            <button type="submit">Add Location</button>
+        </fieldset>
+    </form>
+    <section class="table-section">
+      <h2>Cookie Sales Data</h2>
+      <table id="sales-table">
+        <thead>
+          <tr>
+            <th>Location</th>
+            <th>6:00 am</th>
+            <th>7:00 am</th>
+            <th>8:00 am</th>
+            <th>9:00 am</th>
+            <th>10:00 am</th>
+            <th>11:00 am</th>
+            <th>12:00 pm</th>
+            <th>1:00 pm</th>
+            <th>2:00 pm</th>
+            <th>3:00 pm</th>
+            <th>4:00 pm</th>
+            <th>5:00 pm</th>
+            <th>6:00 pm</th>
+            <th>7:00 pm</th>
+            <th>Daily Total</th>
+          </tr>
+        </thead>
+        <tbody id="table-body">
+        </tbody>
+        <tfoot id="table-footer">
+          <tr></tr>
+        </tfoot>
+      </table>
+    </section>
+    <section class="table-section">
+      <h2>Staffing Data</h2>
+      <table id="staffing-table">
+        <thead>
+          <tr>
+            <th>Location</th>
+            <th>6:00 am</th>
+            <th>7:00 am</th>
+            <th>8:00 am</th>
+            <th>9:00 am</th>
+            <th>10:00 am</th>
+            <th>11:00 am</th>
+            <th>12:00 pm</th>
+            <th>1:00 pm</th>
+            <th>2:00 pm</th>
+            <th>3:00 pm</th>
+            <th>4:00 pm</th>
+            <th>5:00 pm</th>
+            <th>6:00 pm</th>
+            <th>7:00 pm</th>
+          </tr>
+        </thead>
+        <tbody id="table-body">
+        </tbody>
+        <tfoot id="table-footer">
+          <tr></tr>
+        </tfoot>
+      </table>
+    </section>
+  </main>
   <script src="app.js"></script>
 </body>
 </html>
