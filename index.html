@@ -9,30 +9,58 @@
     <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@400;800&display=swap" rel="stylesheet">
     <script src="app.js"></script>
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Dosis', sans-serif;
+            font-weight: 200;
+            color: #0b0b0b;
+            background-color: #f0f0f0;
+        }
+
+        header {
+            background-color: #8b5a2b;
+            padding: 20px;
+            color: #fff;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #8b5a2b;
+            padding: 10px;
+            display: inline-block;
+        }
+
         nav ul {
             list-style-type: none;
-            padding: 0;
-            margin: 0;
             display: flex;
         }
 
-        nav ul li {
-            margin-right: 15px;
+        nav li {
+            margin-right: 5px;
             margin-bottom: 10px;
         }
 
-        nav ul li a {
-        text-decoration: none;
-        color: #f6f4f2;
-        padding: 5px 10px;
-        background-color: #483425;
-        border-radius: 10px;
-    }
+        nav a {
+            text-decoration: none;
+            color: #f6f4f2;
+            padding: 5px 10px;
+            background-color: #483425;
+            border-radius: 10px;
+        }
 
-        nav ul li a:hover {
-        background-color: #c4a994;
-        border-radius: 5px;
-    }
+        nav a:hover {
+            background-color: #c4a994;
+            border-radius: 5px;
+        }
+
+        main {
+            padding: 20px;
+        }
 
         h1,
         h2,
@@ -89,9 +117,12 @@
         }
         .image-gallery {
             display: flex;
-            flex-wrap: wrap;
+            flex-wrap: nowrap;
+            overflow-x: auto;
             gap: 10px;
+            padding: 20px 0;
         }
+        
         .image-gallery img {
             width: auto;
             height: auto;
@@ -99,6 +130,15 @@
             max-height: 300px;
             object-fit: contain;
             border-radius: 5px;
+            cursor: grab;
+        }
+        
+        .image-gallery img:active {
+            cursor: grabbing;
+        }
+
+        .image-gallery img:hover {
+            transform: scale(1.1);
         }
     </style>
 </head>
